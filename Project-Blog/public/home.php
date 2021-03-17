@@ -2,7 +2,9 @@
 <html>
 <head>
 	<title>Trang chủ</title>
-	<link rel="stylesheet" type="text/css" href="../assets/home-style.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/main-style.css">
+	<link href='https://fonts.googleapis.com/css?family=Quattrocento Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet'>
 </head>
 <body>
 	<div>
@@ -11,33 +13,30 @@
 				<div class="top-header">
 					<nav>
 						<ul>
-							<div>
-								<li><a href="">Mới nhất</a></li>
+							<div class="hovering">
+								<li class="nav-unit list-none"><a href="" class="quattro-sans-font px24 decor-none black-txt bold">Newest Posts</a></li>
 							</div>
-							<div>
-								<li><a href="">Điều hướng</a></li>
-								<ul>
-									<li><a href="">Danh mục</a></li>
-									<li><a href="">Danh mục</a></li>
-									<li><a href="">Danh mục</a></li>
-									<li><a href="">Danh mục</a></li>
-								</ul>
+							<div class="dropdown hovering">
+								<li class="nav-unit list-none"><a href="" class="quattro-sans-font px24 decor-none black-txt bold">Categories</a></li>
+								<div class="dropdown-content">
+									<a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Danh mục</a>
+									<a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Danh mục</a>
+									<a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Danh mục</a>
+									<a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Danh mục</a>
+								</div>
 							</div>
 						</ul>
 					</nav>
 					<div class="logo">
-						<a href=""><img src="" alt="Logo"></a>
+						<a href="home.php"><img src="../assets/images/blog-logo.png" alt="Logo"></a>
 					</div>
 					<div class="social">
 						<ul>
 							<div>
-								<li><a href="">Mới nhất</a></li>
+								<li class="list-none nav-unit"><img src="../assets/images/fb-icon.png" alt="Social" class="icon"><a href="fb.com" class=" quattro-sans-font px24 black-txt bold decor-none">Facebook</a></li>
 							</div>
 							<div>
-								<li><a href="">Mới nhất</a></li>
-							</div>
-							<div>
-								<li><a href="">Mới nhất</a></li>
+								<li class="list-none nav-unit"><img src="../assets/images/ins-icon.png" alt="Social" class="icon"><a href="instagram.com" class=" quattro-sans-font px24 black-txt bold decor-none">Instagram</a></li>
 							</div>
 						</ul>
 					</div>
@@ -45,20 +44,16 @@
 				<div class="introduction">
 					<div class="slider">
 						<div class="left-arrow">
-							<a href=""><img src="" alt="Mũi tên sang trái"></a>
+							<button><img src="../assets/images/left-arrow.png" alt="Mũi tên sang trái"></button>
 						</div>
-						<div>
-							<div>
+						<div class="intro-area">
 								<div class="intro-title">
-									<a href="">Giới thiệu về blog</a>
+									<p class="black-txt bold upper px40 quattro-sans-font">About this Blog</p>
+									<p class="black-txt px20 quattro-sans-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 								</div>
-								<div class="intro-img">
-									<a href=""><img src="" alt="Ảnh bìa giới thiệu"></a>
-								</div>
-							</div>
 						</div>
 						<div class="right-arrow">
-							<a href=""><img src="" alt="Mũi tên sang phải"></a>
+							<button><img src="../assets/images/right-arrow.png" alt="Mũi tên sang phải"></button>
 						</div>
 					</div>
 				</div>

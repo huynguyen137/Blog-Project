@@ -1,0 +1,138 @@
+/*General*/
+* {
+	margin: 0;
+	padding: 0;
+}
+.quattro-font {
+	font-family: 'Quattrocento';
+}
+.quattro-sans-font {
+	font-family: 'Quattrocento Sans';
+}
+.upper {
+	text-transform: uppercase;
+}
+.bold {
+	font-weight: bold;
+}
+.decor-none {
+	text-decoration: none;
+}
+.black-txt {
+	color: #000;
+}
+.white-txt {
+	color: #fff;
+}
+.px12 {
+	font-size: 12px;
+}
+.px20 {
+	font-size: 20px
+}
+.px24 {
+	font-size: 24px;
+}
+.px40 {
+	font-size: 40px;
+}
+/*.dplay-none {
+	display: none;
+}
+.dplay-show {
+	display: flex;
+}*/
+.list-none {
+	list-style: none;
+}
+.decor-none {
+	text-decoration: none;
+}
+/*Header*/
+.top-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 1170px;
+}
+nav ul, .social ul {
+	display: flex;
+	flex-flow: row;
+}
+.nav-unit {
+	padding: 25px 27px;
+}
+.hovering:hover li, .hovering:hover li a{
+	cursor: pointer;
+	background-color: red;
+	color: #FFF;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  	z-index: 1;
+}
+.dropdown-content a {
+	float: none;
+	padding: 12px 16px;
+	display: block;
+	text-align: left;
+	background-color: #fff;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+	float: none;
+}
+.dropdown-content a:hover{
+	background-color: #ddd;
+}
+.logo img {
+	max-height: 60px;
+	margin: 15px 0;
+}
+.icon {
+	height: 16px;
+	margin-right: 10px;
+}
+
+/*Introduction*/
+.introduction {
+	background-color: #cecece;
+	/*background-image: url(../images/cover3.jpg); 
+	background-size: cover;*/
+	height: 630px;
+}
+.slider {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-around;
+	margin: 0 auto;
+}
+.left-arrow, .right-arrow {
+	margin-top: 300px;
+	margin-bottom: 300px;
+}
+.left-arrow button, .right-arrow button {
+	background-color: inherit;
+	border: none;
+	outline: none;
+}
+.left-arrow button:hover , .right-arrow button:hover {
+	cursor: pointer;
+}
+.intro-area {
+	width: 1170px;
+	display: flex;
+	flex-direction: column;
+}
+.intro-title {
+	margin-left: 10%;
+	margin-bottom: 25%;
+}
+.intro-title p {
+	width: 50%;
+	margin-top: 30px;
+}
