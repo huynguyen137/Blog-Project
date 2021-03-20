@@ -19,10 +19,10 @@
 							<div class="dropdown hovering">
 								<li class="nav-unit list-none"><a href="" class="quattro-sans-font px24 decor-none black-txt bold">Categories</a></li>
 								<div class="dropdown-content">
-									<a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Danh mục</a>
-									<a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Danh mục</a>
-									<a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Danh mục</a>
-									<a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Danh mục</a>
+									<a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Category</a>
+									<a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Category</a>
+									<a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Category</a>
+									<a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Category</a>
 								</div>
 							</div>
 						</ul>
@@ -58,108 +58,163 @@
 					</div>
 				</div>
 			</header>
-			<div class="content">
-				<section class="main-content">
-					<div class="post-link">
-						<div class="post-thumb">
-							<a href=""><img src="" alt="Bài viết"></a>
-						</div>
-						<div class="post-txt">
-							<div class="post-title">
-								<a href="">Tiêu đề bài viết</a>
+			<div class="wrap-content">
+				<div class="content">
+					<section class="main-content">
+						<div class="pre-post-link">
+							<div class="pre-post-thumb">
+								<a href=""><img src="../assets/images/cover.jpg" alt="Bài viết"></a>
 							</div>
-							<div class="post-intro">
-								<p>Lời dẫn cho bài viết</p>
-							</div>
-						</div>
-					</div>
-					<div class="post-link">
-						<div class="post-thumb">
-							<a href=""><img src="" alt="Bài viết"></a>
-						</div>
-						<div class="post-txt">
-							<div class="post-title">
-								<a href="">Tiêu đề bài viết</a>
-							</div>
-							<div class="post-intro">
-								<p>Lời dẫn cho bài viết</p>
+							<div class="pre-post-txt">
+								<div class="pre-post-title">
+									<a href="" class="black-txt px30 bolder decor-none quattro-font">Post title</a>
+								</div>
+								<div class="pre-post-intro">
+									<a href="" class="red-txt px12 bold decor-none quattro-sans-font">Author</a>
+									<a href="" class="red-txt px12 bold decor-none quattro-sans-font">Category</a>
+									<p class="red-txt px12 bold quattro-sans-font"> X hours ago</p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="pre-post-link">
-						<div class="pre-post-thumb">
-							<a href=""><img src="" alt="Bài viết"></a>
-						</div>
-						<div class="pre-post-txt">
-							<div class="pre-post-title">
-								<a href="">Tiêu đề bài viết</a>
+						<div class="pre-post-link">
+							<div class="pre-post-thumb">
+								<a href=""><img src="../assets/images/cover2.jpg" alt="Bài viết"></a>
 							</div>
-							<div class="pre-post-intro">
-								<p>Lời dẫn cho bài viết</p>
-							</div>
-						</div>
-					</div>
-				</section>
-				<aside class="side-content"> <!-- Show các bài viết nổi bật -->
-					<div class="">
-						<p>Các bài viết nổi bật</p>
-					</div>
-					<div class="small-pre-post-link">
-						<div class="small-pre-post-thumb">
-							<a href=""><img src="" alt="Bài viết"></a>
-						</div>
-						<div class="small-pre-post-txt">
-							<div class="small-pre-post-title">
-								<a href="">Tiêu đề bài viết</a>
-							</div>
-							<div class="view-counter">
-								<img src="" alt="Số lượt xem bài viết"> <!-- Ảnh con mắt -->
-								<p>123</p> <!-- Hiện số lượt xem bài viết, sửa lại bằng JS -->
+							<div class="pre-post-txt">
+								<div class="pre-post-title">
+									<a href="" class="black-txt px30 bolder decor-none quattro-font">Post title</a>
+								</div>
+								<div class="pre-post-intro">
+									<a href="" class="red-txt px12 bold decor-none quattro-sans-font">Author</a>
+									<a href="" class="red-txt px12 bold decor-none quattro-sans-font">Category</a>
+									<p class="red-txt px12 bold quattro-sans-font"> X hours ago</p>
+								</div>
 							</div>
 						</div>
-					</div>
-				</aside>
+						<div class="pre-post-link">
+							<div class="pre-post-thumb">
+								<a href=""><img src="../assets/images/cover3.jpg" alt="Bài viết"></a>
+							</div>
+							<div class="pre-post-txt">
+								<div class="pre-post-title">
+									<a href="" class="black-txt px30 bolder decor-none quattro-font">Post title</a>
+								</div>
+								<div class="pre-post-intro">
+									<a href="" class="red-txt px12 bold decor-none quattro-sans-font">Author</a>
+									<a href="" class="red-txt px12 bold decor-none quattro-sans-font">Category</a>
+									<p class="red-txt px12 bold quattro-sans-font"> X hours ago</p>
+								</div>
+							</div>
+						</div>
+					</section>
+					<aside class="side-content"> <!-- Show các bài viết nổi bật -->
+						<div class="side-title">
+							<p class="black-txt px24 quattro-font bold upper">Most popular</p>
+						</div>
+						<div class="small-pre-post-link">
+							<div class="small-pre-post-thumb">
+								<a href=""><img src="../assets/images/cover3.jpg" alt="Bài viết"></a>
+							</div>
+							<div class="small-pre-post-txt">
+								<div class="small-pre-post-title">
+									<div class="small-pre-post-cate">
+										<a href="" class="red-txt quattro-sans-font px12 decor-none bold">Category</a>
+									</div>
+									<div>
+										<a href="" class="black-txt quattro-font px18 decor-none bold px22">Post title</a>
+									</div>
+								</div>
+								<div class="view-counter">
+									<img src="../assets/images/eye-icon.png" alt="Số lượt xem bài viết"> <!-- Ảnh con mắt -->
+									<p class="black-txt quattro-sans-font px12">123</p> <!-- Hiện số lượt xem bài viết, sửa lại bằng JS -->
+								</div>
+							</div>
+						</div>
+						<div class="small-pre-post-link">
+							<div class="small-pre-post-thumb">
+								<a href=""><img src="../assets/images/cover3.jpg" alt="Bài viết"></a>
+							</div>
+							<div class="small-pre-post-txt">
+								<div class="small-pre-post-title">
+									<div class="small-pre-post-cate">
+										<a href="" class="red-txt quattro-sans-font px12 decor-none bold">Category</a>
+									</div>
+									<div>
+										<a href="" class="black-txt quattro-font px18 decor-none bold px22">Post title</a>
+									</div>
+								</div>
+								<div class="view-counter">
+									<img src="../assets/images/eye-icon.png" alt="Số lượt xem bài viết"> <!-- Ảnh con mắt -->
+									<p class="black-txt quattro-sans-font px12">123</p> <!-- Hiện số lượt xem bài viết, sửa lại bằng JS -->
+								</div>
+							</div>
+						</div>
+						<div class="small-pre-post-link">
+							<div class="small-pre-post-thumb">
+								<a href=""><img src="../assets/images/cover3.jpg" alt="Bài viết"></a>
+							</div>
+							<div class="small-pre-post-txt">
+								<div class="small-pre-post-title">
+									<div class="small-pre-post-cate">
+										<a href="" class="red-txt quattro-sans-font px12 decor-none bold">Category</a>
+									</div>
+									<div>
+										<a href="" class="black-txt quattro-font px18 decor-none bold px22">Post title</a>
+									</div>
+								</div>
+								<div class="view-counter">
+									<img src="../assets/images/eye-icon.png" alt="Số lượt xem bài viết"> <!-- Ảnh con mắt -->
+									<p class="black-txt quattro-sans-font px12">123</p> <!-- Hiện số lượt xem bài viết, sửa lại bằng JS -->
+								</div>
+							</div>
+						</div>
+					</aside>
+				</div>
 			</div>
 			<footer>
-				<div class="subscribe">
-					<div>
-						<p>Đăng ký nhận tin</p>
-						<p>Bạn sẽ nhận được email cho mỗi 10 bài viết mới</p>
-					</div>
-					<div>
-						<form method="post" action="">
-							<input type="text" name="fname" class="input" placeholder="Họ và tên">
-							<input type="email" name="mail" class="input" placeholder="Email">
-							<button type="submit" name="submit">Đăng ký</button>
-						</form>
-					</div>
-				</div>
-				<div class="infomation">
-					<div class="copy">
-						<p>Blog 2021</p>
-						<p>Bản quyền thuộc về .</p>
-					</div>
-					<div class="category">
-						<div class="info-cate">
-							<div>
-								<a href="">Danh mục</a>
-							</div>
-							<div>
-								<a href="">Danh mục</a>
-							</div>
-							<div>
-								<a href="">Danh mục</a>
-							</div>
-							<div>
-								<a href="">Danh mục</a>
-							</div>
+				<div class="wrap-subs">
+					<center class="subscribe">
+						<div class="subs-header">
+							<p class="quattro-font px53 bold white-txt">Newsletter</p>
+							<p class="quattro-sans-font px17 white-txt">Enter your email address to receive all news, updates on new arrivals, special offers and other information.</p>
 						</div>
-						<div class="post-cate">
-							<div>
-								<a href="">Danh mục</a>
+						<div class="subs-form">
+							<form method="post" action="">
+								<input type="text" name="fname" class="input" placeholder="YOUR NAME">
+								<input type="email" name="mail" class="input" placeholder="EMAIL">
+								<button type="submit" name="submit" class="quattro-sans-font px17">Subscribe</button>
+							</form>
+						</div>
+					</center>
+				</div>
+				<div class="wrap-info">
+					<div class="infomation">
+						<div class="copy">
+							<p class="white-txt px30 quattro-sans-font upper">Tech Talk</p>
+							<p class="white-txt px17 quattro-sans-font">© 2021, All Rights Reserved.</p>
+						</div>
+						<div class="category">
+							<div class="info-cate">
+								<div>
+									<a href="" class="white-txt quattro-sans-font px17 decor-none">techtalk@gmail.com</a>
+								</div>
+								<div>
+									<a href="" class="white-txt quattro-sans-font px17 decor-none">0987654321</a>
+								</div>
+								<div>
+									<a href="" class="white-txt quattro-sans-font px17 decor-none">Ha Noi, Viet Nam</a>
+								</div>
+								<div>
+									<a href="" class="white-txt quattro-sans-font px17 decor-none">Tech Talk forum</a>
+								</div>
 							</div>
-							<div>
-								<a href="">Danh mục</a>
+							<div class="post-cate">
+								<div>
+									<a href="" class="white-txt quattro-sans-font px17 decor-none">Category</a>
+								</div>
+								<div>
+									<a href="" class="white-txt quattro-sans-font px17 decor-none">Category</a>
+								</div>
 							</div>
 						</div>
 					</div>
