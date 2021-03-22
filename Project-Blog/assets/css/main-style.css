@@ -57,12 +57,12 @@
 .px53 {
 	font-size: 53px;
 }
-/*.dplay-none {
+.dplay-none {
 	display: none;
 }
 .dplay-show {
 	display: flex;
-}*/
+}
 .list-none {
 	list-style: none;
 }
@@ -168,7 +168,7 @@ nav ul, .social ul {
 	margin: 0 auto;
 	justify-content: space-around;
 }
-section {
+.wrap-content section {
 	width: 68%;
 }
 .pre-post-link {
@@ -278,14 +278,14 @@ aside {
 	border: none;
 	outline: none;
 }
-button {
+.subs-form button {
 	color: #fff;
 	background-color: #3b3b3b;
 	padding: 21px 35px;
 	border: none;
 	cursor: pointer;
 }
-button:focus {
+.subs-form button:focus {
 	outline: none;
 	border: none;
 }

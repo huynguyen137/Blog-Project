@@ -1,0 +1,96 @@
+/*Title*/
+.post-introduction {
+	background-color: #3b3b3b;
+	height: 340px;
+}
+.intro-post {
+	margin-top: 10%;
+}
+.breadcrumbs ul {
+	display: flex;
+	flex-flow: row;
+}
+.bread-item:not(:last-of-type):after {
+	content: '\203a';
+	margin: 10px;
+	color: #fff;
+}
+.bread-link:hover {
+	text-decoration: underline;
+}
+.active {
+	color: #f00;
+}
+
+/*Main Content*/
+.post-content {
+	margin-right: 20%;
+	border-bottom: solid 4px #ececec;
+}
+.refer-post {
+	margin: 30px 0 80px;
+}
+.refer-post a:before {
+	content: '\203a \203a';
+}
+.comment-counter {
+	margin-bottom: 40px;
+}
+.comment-list p {
+	margin-bottom: 20px;
+}
+.reply-button {
+	cursor: pointer;
+	border: none;
+	background-color: #fff;
+	color: #f00;
+	float: right;
+}
+.comment-field {
+	margin-top: 60px;
+	display: flex;
+	flex-flow: column;
+}
+.comment-field div {
+	margin: 20px 0;
+}
+.cmt-field {
+	width: 100%;
+	height: 250px;
+	resize: none;
+	border: none;
+	background-color: #f8f8f8;
+}
+.cmt-field:focus {
+	border: none;
+	outline: none;
+}
+.cmt-field:placeholder {
+	padding-left: 10px;
+	font-size: 20px;
+	color: #000;
+	font-family: 'Quattrocento';
+}
+.submit-button {
+	color: #fff;
+	background-color: #3b3b3b;
+	padding: 21px 35px;
+	border: none;
+	cursor: pointer;
+}
+.submit-button:focus {
+	outline: none;
+	border: none;
+}
+
+/*Sidebar*/ 
+.side-subscribe input {
+	height: 60px;
+	padding-left: 20px;
+	border: none;
+	width: 100%;
+}
+.side-subscribe input:focus {
+	border: none;
+	outline: none;
+}
