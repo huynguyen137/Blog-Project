@@ -4,6 +4,8 @@
 	<title>Bài viết</title>
 	<link rel="stylesheet" type="text/css" href="../assets/css/main-style.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/post-style.css">
+	<link href='https://fonts.googleapis.com/css?family=Quattrocento Sans' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet'>
 </head>
 <body>
 	<div class="wrapper">

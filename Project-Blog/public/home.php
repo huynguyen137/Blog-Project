@@ -63,11 +63,11 @@
 					<section class="main-content">
 						<div class="pre-post-link">
 							<div class="pre-post-thumb">
-								<a href=""><img src="../assets/images/cover.jpg" alt="Bài viết"></a>
+								<a href="blog-post.php"><img src="../assets/images/cover.jpg" alt="Bài viết"></a>
 							</div>
 							<div class="pre-post-txt">
 								<div class="pre-post-title">
-									<a href="" class="black-txt px30 bolder decor-none quattro-font">Post title</a>
+									<a href="blog-post.php" class="black-txt px30 bolder decor-none quattro-font">Post title</a>
 								</div>
 								<div class="pre-post-intro">
 									<a href="" class="red-txt px12 bold decor-none quattro-sans-font">Author</a>
@@ -78,11 +78,11 @@
 						</div>
 						<div class="pre-post-link">
 							<div class="pre-post-thumb">
-								<a href=""><img src="../assets/images/cover2.jpg" alt="Bài viết"></a>
+								<a href="blog-post.php"><img src="../assets/images/cover2.jpg" alt="Bài viết"></a>
 							</div>
 							<div class="pre-post-txt">
 								<div class="pre-post-title">
-									<a href="" class="black-txt px30 bolder decor-none quattro-font">Post title</a>
+									<a href="blog-post.php" class="black-txt px30 bolder decor-none quattro-font">Post title</a>
 								</div>
 								<div class="pre-post-intro">
 									<a href="" class="red-txt px12 bold decor-none quattro-sans-font">Author</a>
@@ -93,11 +93,11 @@
 						</div>
 						<div class="pre-post-link">
 							<div class="pre-post-thumb">
-								<a href=""><img src="../assets/images/cover3.jpg" alt="Bài viết"></a>
+								<a href="blog-post.php"><img src="../assets/images/cover3.jpg" alt="Bài viết"></a>
 							</div>
 							<div class="pre-post-txt">
 								<div class="pre-post-title">
-									<a href="" class="black-txt px30 bolder decor-none quattro-font">Post title</a>
+									<a href="blog-post.php" class="black-txt px30 bolder decor-none quattro-font">Post title</a>
 								</div>
 								<div class="pre-post-intro">
 									<a href="" class="red-txt px12 bold decor-none quattro-sans-font">Author</a>
