@@ -229,7 +229,7 @@
 						</div>
 						<div>
 							<form method="post" action="">
-								<input type="text" name="fname" class="input" placeholder="Họ và tên">
+								<input type="text" name="fname" class="input" placeholder="Name">
 								<input type="email" name="mail" class="input" placeholder="Email">
 								<button type="submit" name="submit" class="submit-button upper">Subscribe</button>
 							</form>

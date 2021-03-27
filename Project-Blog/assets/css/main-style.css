@@ -69,6 +69,10 @@
 .decor-none {
 	text-decoration: none;
 }
+.focus-none:focus {
+	border: none;
+	outline: none;
+}
 /*Header*/
 .top-header {
 	display: flex;
