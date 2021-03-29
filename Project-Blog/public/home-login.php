@@ -9,8 +9,8 @@
     <body>
         <div>
             <div class="sticky">
-                <h4>Let's register Account to get more interesting posts.</h4>
-                <a href="./log-in.php"><button class="button1">Logout</button></a>
+                <h4>Welcome back.</h4>
+                <a href="./log-out.php"><button class="button1">Logout</button></a>
             </div>
             <div class="wrapper">
                 <header>

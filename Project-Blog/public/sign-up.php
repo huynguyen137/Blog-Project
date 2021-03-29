@@ -7,6 +7,9 @@
 	<link href='https://fonts.googleapis.com/css?family=Quattrocento Sans' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet'>
 </head>
+<style>
+	.err_login{color: red}
+</style>
 <body>
 	<?php include '../private/user-valid.php'; ?>
 	<div>
@@ -22,19 +25,19 @@
 				<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
 					<div>
 						<input class="quattro-sans-font px20" type="text" name="fullname" placeholder="Fullname" value="<?php echo htmlspecialchars($fullname) ?>">
-						<span><?php echo htmlspecialchars($error['fname_err']); ?></span>
+						<span class="err_login"><?php echo htmlspecialchars($error['fname_err']); ?></span>
 					</div>
 					<div>
 						<input class="quattro-sans-font px20" type="text" name="username" placeholder="Username" value="<?php echo htmlspecialchars($username) ?>">
-						<span><?php echo htmlspecialchars($error['uname_err']); ?></span>
+						<span class="err_login"><?php echo htmlspecialchars($error['uname_err']); ?></span>
 					</div>
 					<div>
 						<input class="quattro-sans-font px20" type="password" name="password" placeholder="Password" value="<?php echo htmlspecialchars($password) ?>">
-						<span><?php echo htmlspecialchars($error['pwd_err']); ?></span>
+						<span class="err_login"><?php echo htmlspecialchars($error['pwd_err']); ?></span>
 					</div>
 					<div>
 						<input class="quattro-sans-font px20" type="password" name="re-password" placeholder="Enter password again" value="<?php echo htmlspecialchars($re_password) ?>">
-						<span><?php echo htmlspecialchars($error['re_pwd_err']); ?></span>
+						<span class="err_login"><?php echo htmlspecialchars($error['re_pwd_err']); ?></span>
 					</div>
 					<div class="flex-wrap-center">
 						<input type="checkbox" name="check" class="checkbox" id="checkbox">

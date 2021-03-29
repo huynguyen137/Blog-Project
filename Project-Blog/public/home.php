@@ -9,7 +9,7 @@
     <body>
         <div>
             <div class="sticky">
-                <h4>Welcome back.</h4>
+                <h4>Let's register Account to get more interesting posts.</h4>
                 <a href="./log-in.php"><button class="button1">Login</button></a>&emsp;&emsp;
                 <a href="./sign-up.php"><button class="button2">Register</button></a>
             </div>

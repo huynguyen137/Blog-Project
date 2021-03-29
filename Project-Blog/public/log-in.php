@@ -26,7 +26,7 @@
 						<input type="password" name="password" placeholder="Password">
 					</div>
 					<div>
-						<button type="submit" class="quattro-sans-font px20 bold upper">Log in</button>
+						<button type="submit" class="quattro-sans-font px20 bold upper">Login</button>
 					</div>
 				</form>
 			</div>

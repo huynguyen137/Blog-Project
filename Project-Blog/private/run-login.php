@@ -11,7 +11,7 @@ if($result['password'] == $password)
 	session_start();
 	$_SESSION["username"] = $username;
 	$_SESSION["power"] = $result['power'];
-	header("location:../public/home.php");
+	header("location:../public/home-login.php");
 }
 else
 {
@@ -19,4 +19,4 @@ else
 }
 $conn->close();
 ?>
-<a href="../public/home-login.php"><button>Trang chủ</button></a>
+<a href="../public/home.php"><button>Trang chủ</button></a>

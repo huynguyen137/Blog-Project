@@ -42,8 +42,8 @@
 		if(array_filter($error)) {
 			
 		} else {
-			include '../private/new-user.php';
+			include './new-user.php';
 			header('location: ./home.php');
 		}
-	} 
+	}
  ?>
