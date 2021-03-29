@@ -42,8 +42,8 @@
 		if(array_filter($error)) {
 			
 		} else {
-			include './new-user.php';
-			header('location: ./home.php');
+			require_once('../private/db-connect.php');
+			require_once('../private/new-user.php');
 		}
 	}
  ?>
