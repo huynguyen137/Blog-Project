@@ -42,7 +42,6 @@
 		if(array_filter($error)) {
 			
 		} else {
-			require_once('../private/db-connect.php');
 			require_once('../private/new-user.php');
 		}
 	}

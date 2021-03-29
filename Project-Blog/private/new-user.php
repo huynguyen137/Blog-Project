@@ -1,4 +1,5 @@
 <?php
+    require_once('db-connect.php');
     $fullname = $_POST['fullname'];
     $username = $_POST['username'];
     $password = $_POST['password'];
