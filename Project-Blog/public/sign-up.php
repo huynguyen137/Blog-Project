@@ -22,26 +22,26 @@
 				<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" autocomplete="off">
 					<div>
 						<input class="quattro-sans-font px20" type="text" name="fullname" placeholder="Fullname" value="<?php echo htmlspecialchars($fullname) ?>">
-						<span class="upper bold px20 quattro-sans-font red-txt"><?php echo htmlspecialchars($error['fname_err']); ?></span>
+						<span><?php echo htmlspecialchars($error['fname_err']); ?></span>
 					</div>
 					<div>
 						<input class="quattro-sans-font px20" type="text" name="username" placeholder="Username" value="<?php echo htmlspecialchars($username) ?>">
-						<span class="upper bold px20 quattro-sans-font red-txt"><?php echo htmlspecialchars($error['uname_err']); ?></span>
+						<span><?php echo htmlspecialchars($error['uname_err']); ?></span>
 					</div>
 					<div>
 						<input class="quattro-sans-font px20" type="password" name="password" placeholder="Password" value="<?php echo htmlspecialchars($password) ?>">
-						<span class="upper bold px20 quattro-sans-font red-txt"><?php echo htmlspecialchars($error['pwd_err']); ?></span>
+						<span><?php echo htmlspecialchars($error['pwd_err']); ?></span>
 					</div>
 					<div>
 						<input class="quattro-sans-font px20" type="password" name="re-password" placeholder="Enter password again" value="<?php echo htmlspecialchars($re_password) ?>">
-						<span class="upper bold px20 quattro-sans-font red-txt"><?php echo htmlspecialchars($error['re_pwd_err']); ?></span>
+						<span><?php echo htmlspecialchars($error['re_pwd_err']); ?></span>
 					</div>
 					<div class="flex-wrap-center">
 						<input type="checkbox" name="check" class="checkbox" id="checkbox">
 						<label for="checkbox" class="quattro-sans-font px24 bold">I agree to the<a href="" class="red-txt decor-none"> Terms and Conditions</a> of <a href="" class="red-txt decor-none">Tech Talk</a></label>
 					</div>
 					<div>
-						<button type="submit" name="submit" class="bold px20 quattro-sans-font" disabled>Sign Up</button> <!-- Disable if check box isnt checked -->
+						<button type="submit" name="submit" class="bold px20 quattro-sans-font bold">Sign Up</button>
 					</div>
 				</form>
 			</div>

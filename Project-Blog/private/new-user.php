@@ -1,17 +1,13 @@
-<?php 
-	include_once 'db-connect.php';
+<?php
+require_once('./db-connect.php');
 
-	$INSERT = "INSERT INTO User(Fullname, Username, Password)
-	VALUES (?, ?, ?)";
+$fullname = $_POST['fullname'];
+$username = $_POST['username'];
+$password = $_POST['password'];
+$power = 'client';
 
-	$stmt= $conn->prepare($INSERT);
-	$stmt->bind_param("sss",$insert_fullname ,$insert_username ,$insert_password);
-
-	$insert_fullname = $_POST['fullname'];
-	$insert_username = $_POST['username'];
-	$insert_password = $_POST['password'];
-	$stmt->execute();
-
-	$stmt->close();
-	$conn->close();
- ?>
+$sql = "INSERT INTO User (fullname, username, password, power) values ('".$fullname."' ,'".$username."' ,'".$password."' ,'".$power."')";
+$stmt = $con->prepare($sql);
+$stmt->execute();
+header('location:../public/home.php');
+?>
