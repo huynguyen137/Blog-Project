@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,7 +10,7 @@
     <body>
         <div>
             <div class="sticky">
-                <h4>Welcome back.</h4>
+                <h4>Welcome back: <?php echo $_SESSION["username"] ?></h4>
                 <a href="./log-out.php"><button class="button1">Logout</button></a>
             </div>
             <div class="wrapper">
