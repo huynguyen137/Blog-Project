@@ -1,4 +1,4 @@
-<?php 
+<?php
 	$fullname = $username = $password = $re_password = "";
 	$error = array("fname_err" => "", "uname_err" => "", "pwd_err" => "", "re_pwd_err" => "");
 
@@ -42,8 +42,8 @@
 		if(array_filter($error)) {
 			
 		} else {
-			include 'new-user.php';
-			header('location: ../public/add-info.php');
+			include '../private/new-user.php';
+			header('location: ./home.php');
 		}
 	} 
  ?>

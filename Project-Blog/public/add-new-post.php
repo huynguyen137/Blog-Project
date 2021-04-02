@@ -46,7 +46,7 @@
 			<p class="quattro-font px53 bold black-txt">Add a new post</p>
 		</div>
 		<div class="new-post">
-			<form method="post" action="../private/new-post.php">
+			<form method="post" action="../private/new-post.php" enctype="multipart/form-data">
 				<div class="main-part">
 					<div>
 						<input type="text" name="title" placeholder="    Title (at least 15 characters)" required minlength="15" class="px40 bold quattro-font focus-none">
@@ -59,10 +59,9 @@
 					<div>
 						<select name="cate" class="cate-group px20 quattro-sans-font bold" required>
 							<option hidden>Choose post's category</option>
-							<option value="cate1">Category 1</option>
-							<option value="cate2">Category 2</option>
-							<option value="cate3">Category 3</option>
-							<option value="cate4">Category 4</option>
+							<option value="1">Category 1</option>
+							<option value="2">Category 2</option>
+							<option value="3">Category 3</option>
 						</select>
 					</div>
 					<div class="file">

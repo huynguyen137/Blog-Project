@@ -8,6 +8,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet'>
 </head>
 <body>
+    <?php include '../private/user-valid.php'; ?>
 	<div>
 		<center>
 			<div class="logo">
@@ -17,12 +18,12 @@
 				<p class="quattro-font px40 black-txt bold">Login</p>
 			</div>
 			<div class="log-in">
-				<form method="post" action="">
+				<form method="post" action="../private/run-login.php">
 					<div>
-						<input type="text" name="username" placeholder="Username" class="">
+						<input type="text" name="username" placeholder="Username" required>
 					</div>
 					<div>
-						<input type="password" name="password" placeholder="Password" class="">
+						<input type="password" name="password" placeholder="Password" required>
 					</div>
 					<div>
 						<button type="submit" class="quattro-sans-font px20 bold upper">Log in</button>

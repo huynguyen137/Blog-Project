@@ -2,6 +2,37 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+}
+.sticky {
+    width: 100%;
+    height: 8em;
+    background-color: #3b3b3b;
+    position: fixed;
+    bottom: 0;
+	z-index: 1;
+	text-align: center;
+	font-size: 1.25rem;
+	font-family: Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+    line-height: 1.6;
+}
+.sticky h4 {
+	color: white;
+	padding: 20px;
+}
+.button1, .button2 {
+	text-align: center;
+    max-width: 200px;
+    color: black;
+    background-color: #cecece;
+	padding: .6rem 3rem;
+    border-radius: 7px;
+    font-size: 20px;
+	border: none;
+	cursor: pointer;
+}
+.button1 {
+	background-color: #ffffff;
 }
 .quattro-font {
 	font-family: 'Quattrocento';
