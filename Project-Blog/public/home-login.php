@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,24 +10,8 @@
     <body>
         <div>
             <div class="sticky">
-                <?php
-                    if(isset($_SESSION["power"])) {
-                        ?>
-                        <h4>
-                            <?php if(isset($_SESSION["username"]))
-                            echo"Xin Chào: ".$_SESSION["username"];
-                            ?>
-                        </h4>
-                        <a href="../private/logout.php"><button class="button1">Logout</button></a>
-
-                    <?php } else {
-                        ?>
-                        <h4>Let's register Account to get more interesting posts.</h4>
-                        <a href="./log-in.php"><button class="button1">Login</button></a>&emsp;&emsp;
-                        <a href="./sign-up.php"><button class="button2">Register</button></a>
-                    <?php
-                    }
-                ?>
+                <h4>Welcome back: <?php echo $_SESSION["username"] ?></h4>
+                <a href="./log-out.php"><button class="button1">Logout</button></a>
             </div>
             <div class="wrapper">
                 <header>
@@ -34,15 +19,15 @@
                         <nav>
                             <ul>
                                 <div class="hovering">
-                                    <li class="nav-unit list-none"><a href="add-new-post.php" class="quattro-sans-font px24 decor-none black-txt bold">Post a Blog</a></li>
+                                    <li class="nav-unit list-none"><a href="" class="quattro-sans-font px24 decor-none black-txt bold">Newest Posts</a></li>
                                 </div>
                                 <div class="dropdown hovering">
                                     <li class="nav-unit list-none"><a href="" class="quattro-sans-font px24 decor-none black-txt bold">Categories</a></li>
                                     <div class="dropdown-content">
-                                        <a href="" class="quattro-sans-font px20 list-none decor-none black-txt">All</a>
-                                        <a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Phone</a>
-                                        <a href="" class="quattro-sans-font px20 list-none decor-none black-txt">PC & Laptop</a>
-                                        <a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Vehicle</a>
+                                        <a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Category</a>
+                                        <a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Category</a>
+                                        <a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Category</a>
+                                        <a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Category</a>
                                     </div>
                                 </div>
                             </ul>
