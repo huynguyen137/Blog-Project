@@ -8,7 +8,6 @@
 	<link href='https://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet'>
 </head>
 <body>
-    <?php include '../private/user-valid.php'; ?>
 	<div>
 		<center>
 			<div class="logo">

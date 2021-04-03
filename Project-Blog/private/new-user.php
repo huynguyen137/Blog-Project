@@ -1,5 +1,5 @@
 <?php
-require_once('./db-connect.php');
+require_once('db-connect.php');
 
 $fullname = $_POST['fullname'];
 $username = $_POST['username'];
@@ -9,5 +9,5 @@ $power = 'client';
 $sql = "INSERT INTO User (fullname, username, password, power) values ('".$fullname."' ,'".$username."' ,'".$password."' ,'".$power."')";
 $stmt = $con->prepare($sql);
 $stmt->execute();
-header('location:../public/home.php');
+header('location:../public/home-login.php');
 ?>

@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +29,11 @@
 						</ul>
 					</nav>
 					<div class="logo">
-						<a href="home.php"><img src="../assets/images/blog-logo.png" alt="Logo"></a>
+						<a href="<?php if(isset($_SESSION['username'])) {
+                                echo "home-login.php";
+                            } else {
+                                echo "home.php";
+                            } ?>"><img src="../assets/images/blog-logo.png" alt="Logo"></a>
 					</div>
 					<div class="social">
 						<ul>

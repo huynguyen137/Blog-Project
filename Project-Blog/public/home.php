@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    if (isset($_SESSION['username'])) {
+         header('location: home-login.php');
+     } 
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,9 +27,9 @@
 
                     <?php } else {
                         ?>
-                        <h4>Let's register Account to get more interesting posts.</h4>
-                        <a href="./log-in.php"><button class="button1">Login</button></a>&emsp;&emsp;
-                        <a href="./sign-up.php"><button class="button2">Register</button></a>
+                        <h4>Register an account to get more interesting posts.</h4>
+                        <a href="log-in.php"><button class="button1">Login</button></a>&emsp;&emsp;
+                        <a href="sign-up.php"><button class="button2">Register</button></a>
                     <?php
                     }
                 ?>
@@ -34,15 +40,20 @@
                         <nav>
                             <ul>
                                 <div class="hovering">
-                                    <li class="nav-unit list-none"><a href="add-new-post.php" class="quattro-sans-font px24 decor-none black-txt bold">Post a Blog</a></li>
+                                    <li class="nav-unit list-none"><a href="home.php" class="quattro-sans-font px24 decor-none black-txt bold">Newest Posts</a></li>
                                 </div>
                                 <div class="dropdown hovering">
                                     <li class="nav-unit list-none"><a href="" class="quattro-sans-font px24 decor-none black-txt bold">Categories</a></li>
                                     <div class="dropdown-content">
-                                        <a href="" class="quattro-sans-font px20 list-none decor-none black-txt">All</a>
-                                        <a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Phone</a>
-                                        <a href="" class="quattro-sans-font px20 list-none decor-none black-txt">PC & Laptop</a>
-                                        <a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Vehicle</a>
+                                        <a href="<?php if(isset($_SESSION['username'])) {
+                                                            echo "home-login.php";
+                                                        } else {
+                                                            echo "home.php";
+                                                        } ?>"
+                                        class="quattro-sans-font px20 list-none decor-none black-txt">All</a>
+                                        <a href="cate-phone.php" class="quattro-sans-font px20 list-none decor-none black-txt">Phone</a>
+                                        <a href="cate-pc.php" class="quattro-sans-font px20 list-none decor-none black-txt">PC & Laptop</a>
+                                        <a href="cate-vh.php" class="quattro-sans-font px20 list-none decor-none black-txt">Vehicle</a>
                                     </div>
                                 </div>
                             </ul>

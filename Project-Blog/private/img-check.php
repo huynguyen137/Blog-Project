@@ -20,7 +20,7 @@
 			} else {
 				// $new_img_name = uniqid("tt-img-", true) .'.'.$ex_to_lower;
 				$img_url = '../assets/images/' .$img_name;
-				// move_uploaded_file($img_tmp_name, $img_url);
+				move_uploaded_file($img_tmp_name, $img_url);
 			}
 		}
 	}

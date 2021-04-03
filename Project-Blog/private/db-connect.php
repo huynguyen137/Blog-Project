@@ -4,11 +4,8 @@ $username = 'root';
 $password = '';
 $dbname = 'myDB';
 
-try{
-	$con = new PDO("mysql:host=$server; dbname=$dbname", $username, $password);
-	$con->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-}
-catch (PDOException $e) {
-	echo "Error ".$e->getMessage();
-}
+$con = new mysqli($server, $username, $password, $dbname);
+	if($con->connect_error) {
+		die("Connection failed: " .$conn->connect_error);
+	}
 ?>
