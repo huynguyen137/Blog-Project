@@ -8,6 +8,11 @@
 	<link href='https://fonts.googleapis.com/css?family=Quattrocento' rel='stylesheet'>
 </head>
 <body>
+	<?php 
+	if (isset($_GET['error'])) {
+		$pop_up = $_GET['error'];
+		echo "<script type='text/javascript'>alert('$pop_up');</script>";
+	} ?>
 	<div>
 		<center>
 			<div class="top-header">
