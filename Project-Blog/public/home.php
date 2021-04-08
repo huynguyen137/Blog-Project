@@ -14,7 +14,13 @@
     </head>
     <body>
         <div>
-            <div class="sticky">
+            <script>
+                function closesticky() {
+                    var sticky = document.getElementById('sticky');
+                    sticky.style.display = 'none';
+                }
+            </script>
+            <div class="sticky" id="sticky">
                 <?php
                     if(isset($_SESSION["power"])) {
                         ?>
@@ -27,6 +33,7 @@
 
                     <?php } else {
                         ?>
+                        <button class='btn-exit' onClick='closesticky()'>&#x2715;</button>
                         <h4>Register an account to get more interesting posts.</h4>
                         <a href="log-in.php"><button class="button1">Login</button></a>&emsp;&emsp;
                         <a href="sign-up.php"><button class="button2">Register</button></a>
@@ -92,51 +99,53 @@
                 <div class="wrap-content">
                     <div class="content">
                         <section class="main-content">
+                            <?php 
+                                include_once '../private/db-connect.php';
+
+                                $READ1 = "SELECT * FROM post ORDER BY post_id DESC";
+                                $print_post = $con->query($READ1);
+
+                                if ($print_post->num_rows > 0) {
+                                    while ($post_area = $print_post->fetch_assoc()) { ?>
                             <div class="pre-post-link">
                                 <div class="pre-post-thumb">
-                                    <a href="blog-post.php"><img src="../assets/images/cover.jpg" alt="Bài viết"></a>
+                                    <a href="blog-post.php"><img src="<?php echo $post_area['image_url']; ?>" alt="Bài viết"></a>
                                 </div>
                                 <div class="pre-post-txt">
                                     <div class="pre-post-title">
-                                        <a href="blog-post.php" class="black-txt px30 bolder decor-none quattro-font">Post title</a>
+                                        <a href="blog-post.php" class="black-txt px30 bolder decor-none quattro-font"><?php echo $post_area['title']; ?></a>
                                     </div>
                                     <div class="pre-post-intro">
-                                        <a href="" class="red-txt px12 bold decor-none quattro-sans-font">Author</a>
-                                        <a href="" class="red-txt px12 bold decor-none quattro-sans-font">Category</a>
+                                        <a href="" class="red-txt px12 bold decor-none quattro-sans-font">
+                                            <?php 
+                                                $key_id1 = $post_area['user_id']; 
+                                                $READ2 = "SELECT * FROM user WHERE user_id = '$key_id1'";
+                                                $print_name = $con->query($READ2);
+                                                if ($print_name->num_rows > 0) {
+                                                    while ($post_name = $print_name->fetch_assoc()) {
+                                                        echo $post_name['fullname'];
+                                                    }
+                                                }
+                                            ?>
+                                                
+                                        </a>
+                                        <a href="" class="red-txt px12 bold decor-none quattro-sans-font">
+                                            <?php 
+                                                $key_id2 = $post_area['cate_id']; 
+                                                $READ3 = "SELECT * FROM cate WHERE cate_id = '$key_id2'";
+                                                $print_cate = $con->query($READ3);
+                                                if ($print_cate->num_rows > 0) {
+                                                    while ($post_cate = $print_cate->fetch_assoc()) {
+                                                        echo $post_cate['cate_name'];
+                                                    }
+                                                }
+                                            ?>
+                                        </a>
                                         <p class="red-txt px12 bold quattro-sans-font"> X hours ago</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="pre-post-link">
-                                <div class="pre-post-thumb">
-                                    <a href="blog-post.php"><img src="../assets/images/cover2.jpg" alt="Bài viết"></a>
-                                </div>
-                                <div class="pre-post-txt">
-                                    <div class="pre-post-title">
-                                        <a href="blog-post.php" class="black-txt px30 bolder decor-none quattro-font">Post title</a>
-                                    </div>
-                                    <div class="pre-post-intro">
-                                        <a href="" class="red-txt px12 bold decor-none quattro-sans-font">Author</a>
-                                        <a href="" class="red-txt px12 bold decor-none quattro-sans-font">Category</a>
-                                        <p class="red-txt px12 bold quattro-sans-font"> X hours ago</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="pre-post-link">
-                                <div class="pre-post-thumb">
-                                    <a href="blog-post.php"><img src="../assets/images/cover3.jpg" alt="Bài viết"></a>
-                                </div>
-                                <div class="pre-post-txt">
-                                    <div class="pre-post-title">
-                                        <a href="blog-post.php" class="black-txt px30 bolder decor-none quattro-font">Post title</a>
-                                    </div>
-                                    <div class="pre-post-intro">
-                                        <a href="" class="red-txt px12 bold decor-none quattro-sans-font">Author</a>
-                                        <a href="" class="red-txt px12 bold decor-none quattro-sans-font">Category</a>
-                                        <p class="red-txt px12 bold quattro-sans-font"> X hours ago</p>
-                                    </div>
-                                </div>
-                            </div>
+                            <?php } } ?>
                         </section>
                         <aside class="side-content">
                             <!-- Show các bài viết nổi bật -->

@@ -20,6 +20,15 @@
 	color: white;
 	padding: 20px;
 }
+.sticky .btn-exit {
+	float: right;
+	padding :6px 10px;
+	margin: 10px;
+	background: #cecece;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
 .button1, .button2 {
 	text-align: center;
     max-width: 200px;

@@ -9,9 +9,33 @@
     </head>
     <body>
         <div>
-            <div class="sticky">
-                <h4>Welcome back: <?php echo $_SESSION["username"] ?></h4>
-                <a href="./log-out.php"><button class="button1">Logout</button></a>
+            <script>
+                function closesticky() {
+                    var sticky = document.getElementById('sticky');
+                    sticky.style.display = 'none';
+                }
+            </script>
+            <div class="sticky" id="sticky">
+                <?php
+                    if(isset($_SESSION["power"])) {
+                        ?>
+                        <button class='btn-exit' onClick='closesticky()'>&#x2715;</button>
+                        <h4>
+                            <?php if(isset($_SESSION["username"]))
+                            echo"Xin Chào: ".$_SESSION["username"];
+                            ?>
+                        </h4>
+                        <a href="../private/logout.php"><button class="button1">Logout</button></a>
+
+                    <?php } else {
+                        ?>
+                        <button class='btn-exit' onClick='closesticky()'>&#x2715;</button>
+                        <h4>Register an account to get more interesting posts.</h4>
+                        <a href="log-in.php"><button class="button1">Login</button></a>&emsp;&emsp;
+                        <a href="sign-up.php"><button class="button2">Register</button></a>
+                    <?php
+                    }
+                ?>
             </div>
             <div class="wrapper">
                 <header>
