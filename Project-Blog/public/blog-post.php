@@ -14,9 +14,13 @@
 			<div class="top-header">
 					<nav>
 						<ul>
-							<div class="hovering">
-								<li class="nav-unit list-none"><a href="" class="quattro-sans-font px24 decor-none black-txt bold">Newest Posts</a></li>
-							</div>
+							<div class="dropdown hovering">
+                                    <li class="nav-unit list-none"><a href="" class="quattro-sans-font px24 decor-none black-txt bold">Main Menu</a></li>
+                                    <div class="dropdown-content">
+                                        <a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Profile</a>
+                                        <a href="add-new-post.php" class="quattro-sans-font px20 list-none decor-none black-txt">Post a Blog</a>
+                                    </div>
+                                </div>                                
 							<div class="dropdown hovering">
 								<li class="nav-unit list-none"><a href="" class="quattro-sans-font px24 decor-none black-txt bold">Categories</a></li>
 								<div class="dropdown-content">
@@ -51,18 +55,26 @@
 						</ul>
 					</div>
 				</div>
-				<div class="post-introduction">
-					<div class="slider">
+				<?php if (isset($_GET['id'])) {
+					include '../private/read-post-db.php';
+					$view = $blp1['post_view'] + 1;
+
+					$UPDATE = "UPDATE post SET post_view='$view' WHERE post_id='$define'";
+					$push= $con->query($UPDATE);
+
+				?>
+				<div class="post-introduction" style="background-image: url(<?php echo $blp1['image_url']; ?>);background-repeat: no-repeat;background-size: cover;">
+					<div class="slider" >
 						<div class="intro-area">
 								<div class="intro-post">
 									<div class="breadcrumbs">
 										<ul>
 											<li class="list-none bread-item"><a class=" bread-link white-txt decor-none px12 bold quattro-sans-font" href="home.php">Home</a></li>
-											<li class="list-none bread-item"><a class="active bread-link decor-none px12 bold quattro-sans-font" href="">Category</a></li>
+											<li class="list-none bread-item"><a class="active bread-link decor-none px12 bold quattro-sans-font" href=""><?php echo $blp2['cate_name']; ?></a></li>
 										</ul>
 									</div>
 									<div class="post-title">
-										<p class="quattro-font px53 white-txt">This is a very looooong post title</p>
+										<p class="quattro-font px53 white-txt"><?php echo $blp1['title']; ?></p>
 									</div>
 								</div>
 						</div>
@@ -74,37 +86,24 @@
 				<section>
 					<div class="post-content"> <!-- Mẫu với nội dung cơ bản -->
 						<div class="post-txt">
-							<p class="quattro-sans-font px17 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p><br>
-
-							<p class="quattro-sans-font px17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p><br>
-
-							<p class="quattro-sans-font px17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p><br>
-
-							<p class="quattro-sans-font px17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p><br>
-
-							<p class="quattro-sans-font px17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p><br>
-
-							<p class="quattro-sans-font px17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p><br>
-
-							<p class="quattro-sans-font px17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p><br>
-
-							<p class="quattro-sans-font px17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p><br>
-
-							<p class="quattro-sans-font px17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p><br>
-
-							<p class="quattro-sans-font px17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p><br>
-
-							<p class="quattro-sans-font px17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p><br>
-
-							<p class="quattro-sans-font px17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p><br>
-
-							<p class="quattro-sans-font px17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p><br>
-
-							<p class="quattro-sans-font px17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
-
-							<p class="quattro-sans-font px17">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+							<pre class="quattro-sans-font px17 "><?php echo $blp1['content']; ?></pre><br>
+						</div>
+						<div class="post-side-info">
+							<div class="signature">
+								<b class="quattro-sans-font px20"><?php echo $blp3['fullname']; ?></b>
+							</div>
+							<div>
+								<div>
+									<i class="quattro-sans-font px17"><?php echo $blp1['post_date']; ?></i>
+								</div>
+								<div class="view-counter float-right">
+									<img src="../assets/images/eye-icon.png" alt="eye-icon">
+									<p class="quattro-sans-font px12"><?php echo $view; ?></p>
+								</div>
+							</div>
 						</div>
 					</div>
+				<?php } ?>
 					<div class="refer-post"> <!-- Các bài viết tham khảo -->
 						<div>
 							<a class="decor-none px22 quattro-font black-txt" href="">Refer post title</a>

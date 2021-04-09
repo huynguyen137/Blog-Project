@@ -71,7 +71,7 @@
 			<form method="post" action="../private/new-post.php" enctype="multipart/form-data" autocomplete="off">
 				<div class="main-part">
 					<div>
-						<input type="text" name="title" placeholder="    Title (at least 15 characters)" required minlength="15" class="px40 bold quattro-font focus-none">
+						<input type="text" name="title" placeholder="    Title (at least 15 characters)" required minlength="15" class="px40 bold quattro-font focus-none" value="<?php echo htmlspecialchars($insert_title) ?>">
 					</div>
 					<div>
 						<textarea placeholder="Content" name="content" required class="quattro-sans-font px30"></textarea>
@@ -81,9 +81,9 @@
 					<div>
 						<select name="cate" class="cate-group px20 quattro-sans-font bold" required>
 							<option hidden>Choose post's category</option>
-							<option value="1">Phone</option>
-							<option value="2">PC & Laptop</option>
-							<option value="3">Vehicle</option>
+							<option value="1">Vehicle</option>
+							<option value="2">Phone</option>
+							<option value="3">PC & Laptop</option>
 						</select>
 					</div>
 					<div class="file">

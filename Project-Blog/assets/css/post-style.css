@@ -27,6 +27,14 @@
 	margin-right: 20%;
 	border-bottom: solid 4px #ececec;
 }
+pre {
+	white-space: pre-wrap;
+}
+.post-side-info {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
 .refer-post {
 	margin: 30px 0 80px;
 }
@@ -45,6 +53,9 @@
 	background-color: #fff;
 	color: #f00;
 	float: right;
+}
+.comment-show, .comment-field {
+	width: 90%;
 }
 .comment-field {
 	margin-top: 60px;

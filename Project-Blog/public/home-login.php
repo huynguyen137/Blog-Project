@@ -42,10 +42,13 @@
                     <div class="top-header">
                         <nav>
                             <ul>
-                                <div class="hovering">
-                                    <li class="nav-unit list-none"><a href="add-new-post.php" class="quattro-sans-font px24 decor-none black-txt bold">Post a Blog</a></li>
-                                </div>
                                 <div class="dropdown hovering">
+                                    <li class="nav-unit list-none"><a href="" class="quattro-sans-font px24 decor-none black-txt bold">Main Menu</a></li>
+                                    <div class="dropdown-content">
+                                        <a href="" class="quattro-sans-font px20 list-none decor-none black-txt">Profile</a>
+                                        <a href="add-new-post.php" class="quattro-sans-font px20 list-none decor-none black-txt">Post a Blog</a>
+                                    </div>
+                                </div>                                <div class="dropdown hovering">
                                     <li class="nav-unit list-none"><a href="" class="quattro-sans-font px24 decor-none black-txt bold">Categories</a></li>
                                     <div class="dropdown-content">
                                         <a href="<?php if(isset($_SESSION['username'])) {
@@ -113,7 +116,7 @@
                                 </div>
                                 <div class="pre-post-txt">
                                     <div class="pre-post-title">
-                                        <a href="blog-post.php" class="black-txt px30 bolder decor-none quattro-font"><?php echo $post_area['title']; ?></a>
+                                        <a href="blog-post.php?id=<?php echo $post_area['post_id']; ?>" class="black-txt px30 bolder decor-none quattro-font"><?php echo $post_area['title']; ?></a>
                                     </div>
                                     <div class="pre-post-intro">
                                         <a href="" class="red-txt px12 bold decor-none quattro-sans-font">
