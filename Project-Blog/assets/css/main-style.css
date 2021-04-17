@@ -71,6 +71,11 @@
 .red-txt {
 	color: red;
 }
+.txt-ovfl {
+    width: 50%;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
 .px12 {
 	font-size: 12px;
 }
@@ -269,16 +274,13 @@ aside {
 	flex-flow: row wrap;
 	margin-bottom: 50px;
 }
-.small-pre-post-txt {
-	margin-left: 30px;
-}
 .small-pre-post-title div:last-child {
 	margin: 13px 20px 25px 0;
 }
 .small-pre-post-thumb {
-	width: 45%;
+	width: 100%;
 	position: relative;
-	padding-bottom: 21.33%;
+	padding-bottom: 47.33%;
 }
 .small-pre-post-thumb img {
 	position: absolute;

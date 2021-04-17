@@ -21,10 +21,10 @@
 			$insert_date = date('Y-m-d H:i:s');
 			$insert_user_id = $take_id;
 			$insert_view = 0;
-			$stmt->execute();
+			$result = $stmt->execute();
 
 			
-			if($stmt->execute() == true) {
+			if($result == true) {
 				header('location:../public/home-login.php');
 			} else {
 				echo "Error.";

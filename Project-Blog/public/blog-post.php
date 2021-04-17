@@ -116,122 +116,128 @@
 						</div>
 					</div>
 					<div class="comment-show"> <!-- Các comment của bài viết -->
-						<div class="comment-counter">
+						
+						
+						<?php 
+                                include_once '../private/db-connect.php';
+
+                                $READ4 = "SELECT * FROM cmts WHERE post_id= $define ORDER BY cmt_id DESC";
+                                $print4 = $con->query($READ4);
+                        
+	                            if ($print4->num_rows > 0 ) { ?>
+
+	                    <div class="comment-counter">
 							<p class="quattro-sans-font bold px22 black-txt">123 comments</p> <!-- Đếm số bình luận, code lại phần đếm số -->
 						</div>
+
+	                    <?php   while ($blp4 =$print4->fetch_assoc()) { ?>
 						<div class="comment-list">
 							<div>
 								<div>
-									<p class="quattro-sans-font px17 bold black-txt">Username</p>
-									<p class="quattro-sans-font px12 bold red-txt">Posted 12:48pm</p>
+									<p class="quattro-sans-font px17 bold black-txt">
+										<?php
+											$blp_uid = $blp4['user_id'];
+											$READ5 = "SELECT fullname FROM user WHERE user_id = $blp_uid";
+											$print5 = $con->query($READ5);
+											if ($print5->num_rows > 0 ) {
+												while($blp5 = $print5->fetch_assoc()){
+													echo $blp5['fullname'];
+												}
+											} 
+									 	?></p>
+									<p class="quattro-sans-font px12 bold red-txt">Posted <?php echo $blp4['cmt_date']; ?></p>
 								</div>
 								<div>
-									<p class="quattro-sans-font px17 black-txt">The preservation of human life is the ultimate value, a pillar of ethics and the foundation of all morality. This held true in most cultures and societies throughout history.</p>
+									<p class="quattro-sans-font px17 black-txt"><?php echo $blp4['cmt_content']; ?></p>
 								</div>
 								<div class="reply">
 									<button type="button" class="quattro-sans-font reply-button upper px17 bold">Reply</button>
 								</div>
 							</div>
+
+						<?php } }else{?>
+
+						<div class="comment-list">
 							<div>
 								<div>
-									<p class="quattro-sans-font px17 bold black-txt">Username</p>
-									<p class="quattro-sans-font px12 bold red-txt">Posted 12:48pm</p>
-								</div>
-								<div>
-									<p class="quattro-sans-font px17 black-txt">The preservation of human life is the ultimate value, a pillar of ethics and the foundation of all morality. This held true in most cultures and societies throughout history.</p>
-								</div>
-								<div class="reply">
-									<button type="button" class="quattro-sans-font reply-button upper px17 bold">Reply</button>
-								</div>
-							</div>
-							<div>
-								<div>
-									<p class="quattro-sans-font px17 bold black-txt">Username</p>
-									<p class="quattro-sans-font px12 bold red-txt">Posted 12:48pm</p>
-								</div>
-								<div>
-									<p class="quattro-sans-font px17 black-txt">The preservation of human life is the ultimate value, a pillar of ethics and the foundation of all morality. This held true in most cultures and societies throughout history.</p>
-								</div>
-								<div class="reply">
-									<button type="button" class="quattro-sans-font reply-button upper px17 bold">Reply</button>
+									<p class="quattro-sans-font px22 bold black-txt">No comments yet.</p>
 								</div>
 							</div>
 						</div>
+
+						<?php } ?>
+
+						</div>
 					</div>
+					<?php include '../private/cmt-upload.php'; ?>
 					<div class="comment-field"> <!-- Comment bài viết, code lại để người dùng đăng nhập mới được cmt -->
 						<div>
 							<p class="quattro-sans-font px22 bold black-txt">Post a comment</p>
 						</div>
-						<div class="dplay-none"><p>Please <a href="">log in</a> to post a comment</p></div>
+						<?php if(!isset($_SESSION['username'])) { ?>
 						<div>
-							<form method="post" action="">
+							<p class="quattro-sans-font px30 bold">Please <a href="log-in.php" class="red-txt decor-none">log in</a> to post a comment</p>
+						</div>
+						<?php }else{ ?>
+						<div>
+							<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+								<input type="text" name="post_id" class="dplay-none" value="<?php echo $blp1['post_id']; ?>">
+								<input type="text" name="user_id" class="dplay-none" value="<?php echo $blp3['user_id']; ?>">
 								<textarea placeholder="Write a comment" class="cmt-field px20" name="comment"></textarea>
 								<button type="submit" name="submit" class="submit-button upper">Post</button>
 							</form>
 						</div>
+						<?php } ?>
 					</div>
 				</section>
+
+
 				<aside class="side-content"> <!-- Show các bài viết nổi bật -->
+					
 					<div class="side-title">
 						<p class="black-txt px24 quattro-font bold upper">Most popular</p>
 					</div>
+					<?php 
+						include '../private/db-connect.php';
+
+						$READ6 = "SELECT cate_id,title,image_url,post_view FROM post ORDER BY post_view DESC";
+						$print6 = $con->query($READ6);
+						$i = 0;
+
+						if($print6->num_rows >0) {
+							while ($popular = $print6->fetch_assoc()) {
+					?>
 					<div class="small-pre-post-link">
 						<div class="small-pre-post-thumb">
-							<a href=""><img src="../assets/images/cover3.jpg" alt="Bài viết"></a>
+							<a href=""><img src="<?php echo $popular['image_url']; ?>" alt="Bài viết"></a>
 						</div>
 						<div class="small-pre-post-txt">
 							<div class="small-pre-post-title">
 								<div class="small-pre-post-cate">
-									<a href="" class="red-txt quattro-sans-font px12 decor-none bold">Category</a>
+									<a href="" class="red-txt quattro-sans-font px12 decor-none bold">
+										<?php 
+											$key_cate = $popular['cate_id'];
+											$READ7 = "SELECT cate_name FROM cate WHERE cate_id = $key_cate";
+											$print7 = $con->query($READ7);
+											if($print7->num_rows>0) {
+												while ($popular_cate = $print7->fetch_assoc()) {
+													echo $popular_cate['cate_name'];
+												}
+											}
+										?>	
+									</a>
 								</div>
 								<div>
-									<a href="" class="black-txt quattro-font px18 decor-none bold px22">Post title</a>
+									<a href="" class="black-txt quattro-font px18 decor-none bold px22 txt-ovfl"><?php echo $popular['title']; ?></a>
 								</div>
 							</div>
 							<div class="view-counter">
-								<img src="../assets/images/eye-icon.png" alt="Số lượt xem bài viết"> <!-- Ảnh con mắt -->
-								<p class="black-txt quattro-sans-font px12">123</p> <!-- Hiện số lượt xem bài viết, sửa lại bằng JS -->
+								<img src="../assets/images/eye-icon.png" alt="Số lượt xem bài viết">
+								<p class="black-txt quattro-sans-font px12"><?php echo $popular['post_view']; ?></p>
 							</div>
 						</div>
 					</div>
-					<div class="small-pre-post-link">
-						<div class="small-pre-post-thumb">
-							<a href=""><img src="../assets/images/cover3.jpg" alt="Bài viết"></a>
-						</div>
-						<div class="small-pre-post-txt">
-							<div class="small-pre-post-title">
-								<div class="small-pre-post-cate">
-									<a href="" class="red-txt quattro-sans-font px12 decor-none bold">Category</a>
-								</div>
-								<div>
-									<a href="" class="black-txt quattro-font px18 decor-none bold px22">Post title</a>
-								</div>
-							</div>
-							<div class="view-counter">
-								<img src="../assets/images/eye-icon.png" alt="Số lượt xem bài viết"> <!-- Ảnh con mắt -->
-								<p class="black-txt quattro-sans-font px12">123</p> <!-- Hiện số lượt xem bài viết, sửa lại bằng JS -->
-							</div>
-						</div>
-					</div>
-					<div class="small-pre-post-link">
-						<div class="small-pre-post-thumb">
-							<a href=""><img src="../assets/images/cover3.jpg" alt="Bài viết"></a>
-						</div>
-						<div class="small-pre-post-txt">
-							<div class="small-pre-post-title">
-								<div class="small-pre-post-cate">
-									<a href="" class="red-txt quattro-sans-font px12 decor-none bold">Category</a>
-								</div>
-								<div>
-									<a href="" class="black-txt quattro-font px18 decor-none bold px22">Post title</a>
-								</div>
-							</div>
-							<div class="view-counter">
-								<img src="../assets/images/eye-icon.png" alt="Số lượt xem bài viết"> <!-- Ảnh con mắt -->
-								<p class="black-txt quattro-sans-font px12">123</p> <!-- Hiện số lượt xem bài viết, sửa lại bằng JS -->
-							</div>
-						</div>
-					</div>
+					<?php }} ?>
 					<div class="side-subscribe">
 						<div>
 							<p class="px20 quattro-sans-font bold black-txt">Newsletter</p>
